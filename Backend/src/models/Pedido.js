@@ -10,11 +10,5 @@ class Pedido {
         this.direccionEntrega=direccionEntrega;
         this.observaciones=observaciones;
     }
-    calcularTotal(){}
-    cambiarEstado(){}
-    agregarItem(){}
-    eliminarItem(){}
-    cancelar(){}
-    obtenerItems(){}
 }
 export default Pedido;
