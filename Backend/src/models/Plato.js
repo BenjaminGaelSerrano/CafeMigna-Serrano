@@ -8,10 +8,5 @@ class Plato {
         this.disponible=disponible;
         this.imagenUrl=imagenUrl;
     }
-    actualizarPrecio(){}
-    marcarDisponible(){}
-    marcarNoDisponible(){}
-    actualizarImagen(){}
-    obtenerCategoria(){}
 }
 export default Plato;
