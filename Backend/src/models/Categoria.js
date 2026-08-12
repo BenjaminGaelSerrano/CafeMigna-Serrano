@@ -5,8 +5,5 @@ class Categoria {
         this.descripcion=descripcion;
         this.orden=orden;
     }
-    obtenerPlatos(){}
-    actualizarOrden(){}
-    modificarDescripcion(){}
 }
 export default Categoria;
