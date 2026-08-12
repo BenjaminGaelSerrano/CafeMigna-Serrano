@@ -6,9 +6,5 @@ class Mesa {
         this.ubicacion=ubicacion;
         this.disponible=disponible;
     }
-    marcarDisponible(){}
-    marcarOcupada(){}
-    verificarDisponibilidad(){}
-    obtenerReservas(){}
 }
 export default Mesa;
