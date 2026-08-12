@@ -8,9 +8,5 @@ class ItemPedido {
         this.subtotal=subtotal;
         this.observaciones=observaciones;
     }
-    calcularSubtotal(){}
-    modificarCantidad(){}
-    obtenerPlato(){}
-    agregarObservaciones(){}
 }
 export default ItemPedido;
