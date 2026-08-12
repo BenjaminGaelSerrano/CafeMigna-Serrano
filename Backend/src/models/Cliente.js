@@ -7,10 +7,5 @@ class Cliente {
         this.email=email;
         this.direccion=direccion;
     }
-    actualizarDatos(){}
-    validarEmail(){}
-    obtenerReservas(){}
-    obtenerPedidos(){}
-    obtenerNombreCompleto(){}
 }
 export default Cliente;
