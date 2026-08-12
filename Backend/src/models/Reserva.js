@@ -9,10 +9,5 @@ class Reserva {
         this.estado=estado;
         this.observaciones=observaciones;
     }
-    confirmar(){}
-    cancelar(){}
-    completar(){}
-    modificarFechaHora(){}
-    validarDisponibilidad(){}
 }
 export default Reserva;
