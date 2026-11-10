@@ -1,0 +1,32 @@
+.admin-nav {
+    margin-top: 1.75rem;
+}
+
+.admin-nav ul {
+    display: inline-flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0.3rem;
+    list-style: none;
+    background: var(--color-arena);
+    border-radius: var(--radio-tarjeta);
+}
+
+.admin-nav__enlace {
+    display: block;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radio-control);
+    font-weight: 700;
+    color: var(--color-texto-suave);
+    text-decoration: none;
+}
+
+.admin-nav__enlace:hover {
+    color: var(--color-titulos);
+}
+
+.admin-nav__enlace[aria-current="page"] {
+    background: var(--color-superficie);
+    color: var(--color-titulos);
+    box-shadow: 0 1px 3px rgba(46, 36, 30, 0.12);
+}

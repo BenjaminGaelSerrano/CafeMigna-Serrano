@@ -1,0 +1,38 @@
+.plato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: 1.6rem;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radio-tarjeta);
+}
+
+.plato-form__titulo {
+    font-size: 1.45rem;
+    overflow-wrap: anywhere;
+}
+
+.plato-form__fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.plato-form__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+    .plato-form {
+        padding: 1.2rem;
+    }
+
+    .plato-form__fila {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,130 @@
+.navbar {
+    position: relative;
+    z-index: 50;
+    background: var(--color-fondo);
+    border-bottom: 1px solid var(--color-linea);
+}
+
+.navbar__interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 76px;
+}
+
+.navbar__nav--interna {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.navbar__lista {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar__enlace {
+    display: inline-block;
+    padding: 0.5rem 0.65rem;
+    font-weight: 700;
+    font-size: 0.975rem;
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: var(--radio-control);
+}
+
+.navbar__enlace:hover {
+    color: var(--color-acento-fuerte);
+}
+
+.navbar__enlace[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--color-acento);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+.navbar__lista li:last-child {
+    margin-left: 0.6rem;
+}
+
+.navbar__toggle {
+    display: none;
+}
+
+/* Mobile: la navegación completa se pliega detrás de un botón */
+@media (max-width: 860px) {
+    .navbar__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 44px;
+        padding: 0.5rem 0.75rem;
+        background: none;
+        border: 1.5px solid var(--color-linea);
+        border-radius: var(--radio-control);
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .navbar__toggle span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .navbar__lista {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem 1.25rem 1.25rem;
+        background: var(--color-fondo);
+        border-bottom: 1px solid var(--color-linea);
+        box-shadow: 0 12px 20px rgba(46, 36, 30, 0.08);
+    }
+
+    .navbar__lista--abierta {
+        display: flex;
+    }
+
+    .navbar__lista .navbar__enlace {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid var(--color-linea);
+    }
+
+    .navbar__lista li:last-child {
+        margin: 1rem 0 0;
+    }
+
+    .navbar__lista li:last-child .boton {
+        width: 100%;
+    }
+}
+
+.navbar__nav--interna .boton {
+    white-space: nowrap;
+}
+
+/* En pantallas chicas el logo cumple la función de "Volver al inicio" */
+@media (max-width: 480px) {
+    .navbar__nav--interna .navbar__enlace {
+        display: none;
+    }
+
+    .logo__bajada {
+        display: none;
+    }
+}

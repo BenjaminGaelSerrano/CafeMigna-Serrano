@@ -1,0 +1,90 @@
+/* Boceto C: pantalla dividida al medio, formulario y foto del local */
+.reserva {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 77px);
+}
+
+.reserva__formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(100%, 560px);
+    margin-inline: auto;
+    padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
+}
+
+.reserva__titulo {
+    font-size: clamp(2.5rem, 5vw, 3.4rem);
+}
+
+.reserva__bajada {
+    margin-top: 0.6rem;
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+}
+
+.reserva__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    margin-top: 2rem;
+}
+
+.reserva__fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.reserva__form .boton {
+    margin-top: 0.5rem;
+}
+
+.reserva__nota {
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+    text-align: center;
+}
+
+.reserva__volver {
+    align-self: center;
+    margin-top: 1.5rem;
+    color: var(--color-texto-suave);
+    text-underline-offset: 4px;
+}
+
+.reserva__volver:hover {
+    color: var(--color-acento-fuerte);
+}
+
+.reserva__foto {
+    position: relative;
+    background: var(--color-arena);
+}
+
+.reserva__foto img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 860px) {
+    .reserva {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .reserva__foto {
+        order: -1;
+        height: 260px;
+    }
+}
+
+@media (max-width: 420px) {
+    .reserva__fila {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,19 @@
+.finalizar-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.finalizar-pedido__acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.finalizar-pedido__nota {
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+    text-align: center;
+}

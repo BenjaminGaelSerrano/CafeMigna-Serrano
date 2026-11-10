@@ -1,0 +1,59 @@
+/* Estados de carga, error y vacío compartidos por todas las pantallas */
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: var(--color-texto-suave);
+}
+
+.estado__titulo {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-titulos);
+}
+
+.estado__mensaje {
+    max-width: 46ch;
+}
+
+.estado--error,
+.estado--vacio {
+    border: 1.5px dashed #CFC2B3;
+    border-radius: var(--radio-tarjeta);
+}
+
+.estado--error .estado__icono {
+    width: 32px;
+    height: 32px;
+    color: var(--color-error);
+}
+
+.estado .boton {
+    margin-top: 0.4rem;
+}
+
+.loader {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--color-linea);
+    border-top-color: var(--color-acento);
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader {
+        animation: none;
+        border-top-color: var(--color-linea);
+    }
+}

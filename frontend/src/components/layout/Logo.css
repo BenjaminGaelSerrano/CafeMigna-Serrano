@@ -1,0 +1,43 @@
+.logo {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    white-space: nowrap;
+    color: var(--color-titulos);
+    text-decoration: none;
+}
+
+.logo__nombre {
+    font-family: var(--font-titulos);
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.logo__nombre::after {
+    content: "";
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-left: 0.12rem;
+    border-radius: 50%;
+    background: var(--color-acento);
+}
+
+.logo__bajada {
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+}
+
+.logo--claro {
+    color: var(--color-fondo);
+}
+
+.logo--claro .logo__nombre {
+    color: var(--color-fondo);
+}
+
+.logo--claro .logo__bajada {
+    color: var(--color-sobre-oscuro);
+}

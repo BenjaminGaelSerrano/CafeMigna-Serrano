@@ -1,0 +1,33 @@
+/* Tokens de diseño tomados del documento "Armado de diseño" (paleta y tipografías). */
+:root {
+    /* Paleta original */
+    --color-fondo: #FDFBF7;          /* Crema cálido: fondos */
+    --color-texto: #4A3B32;          /* Marrón café: textos */
+    --color-acento: #D96C4A;         /* Naranja terracota: detalles y textos grandes */
+
+    /* Derivados de la paleta */
+    --color-acento-fuerte: #B4532F;  /* Terracota oscurecido: fondo de botones (contraste AA con texto blanco) */
+    --color-acento-hover: #9C4527;
+    --color-titulos: #3A2D25;
+    --color-texto-suave: #6E5D52;
+    --color-arena: #F3ECE2;          /* Secciones alternadas */
+    --color-superficie: #FFFFFF;
+    --color-linea: #E6DCCF;
+    --color-oscuro: #2E241E;         /* Footer */
+    --color-sobre-oscuro: #E8DED3;
+    --color-exito: #3F6B4A;
+    --color-error: #A23B2A;
+    --color-foco: #B4532F;
+
+    /* Tipografía */
+    --font-titulos: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-texto: "Lato", "Segoe UI", system-ui, sans-serif;
+
+    /* Formas */
+    --radio-control: 6px;
+    --radio-tarjeta: 10px;
+    --radio-foto: 14px;
+    --sombra-flotante: 0 10px 30px rgba(46, 36, 30, 0.18);
+
+    --ancho-contenido: 1120px;
+}

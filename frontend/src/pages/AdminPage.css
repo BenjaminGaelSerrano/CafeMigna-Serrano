@@ -1,0 +1,48 @@
+.admin {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.admin__formulario {
+    position: sticky;
+    top: 1.5rem;
+    scroll-margin-top: 1.5rem;
+}
+
+/* Estilos compartidos por las pantallas de administración (platos y reservas) */
+.admin__titulo {
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
+}
+
+.admin__encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.admin__encabezado .admin__titulo {
+    margin-bottom: 0;
+}
+
+.admin__contador {
+    font-family: var(--font-texto);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-texto-suave);
+}
+
+@media (max-width: 960px) {
+    .admin {
+        grid-template-columns: 1fr;
+    }
+
+    .admin__formulario {
+        position: static;
+    }
+}

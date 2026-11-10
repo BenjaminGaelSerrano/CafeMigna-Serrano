@@ -1,4 +1,6 @@
 node_modules/
+dist/
+.env
 .vscode/launch.json
-Backend/README.md
-Backend/ARQUITECTURA.md
+backend/README.md
+backend/ARQUITECTURA.md

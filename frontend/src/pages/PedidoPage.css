@@ -1,0 +1,57 @@
+/* Boceto D: lista de platos a la izquierda y carrito fijo a la derecha */
+.pedido {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+}
+
+/* La lista se alinea con el logo (mismo margen izquierdo que .contenedor) */
+.pedido__platos {
+    padding-block: clamp(2rem, 5vw, 3.25rem) 4rem;
+    padding-inline: max(1.25rem, calc((100vw - var(--ancho-contenido)) / 2)) clamp(1.25rem, 4vw, 3rem);
+}
+
+.pedido__grupo + .pedido__grupo {
+    margin-top: 2.25rem;
+}
+
+.pedido__categoria {
+    margin-bottom: 0.9rem;
+    font-family: var(--font-texto);
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+}
+
+.pedido__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pedido__carrito {
+    background: var(--color-arena);
+    border-left: 1px solid var(--color-linea);
+}
+
+.pedido__carrito-interior {
+    position: sticky;
+    top: 0;
+    padding: clamp(2rem, 5vw, 3.25rem) clamp(1.25rem, 3vw, 2rem) 2.5rem;
+}
+
+@media (max-width: 900px) {
+    .pedido {
+        grid-template-columns: 1fr;
+    }
+
+    .pedido__carrito {
+        border-left: none;
+        border-top: 1px solid var(--color-linea);
+    }
+
+    .pedido__carrito-interior {
+        position: static;
+    }
+}

@@ -1,0 +1,108 @@
+/* Tabla administrable compartida (platos y reservas) */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radio-tarjeta);
+    overflow: hidden;
+}
+
+.tabla th,
+.tabla td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-linea);
+}
+
+.tabla thead th {
+    background: var(--color-arena);
+    font-size: 0.9rem;
+    color: var(--color-titulos);
+}
+
+.tabla tbody tr:last-child > * {
+    border-bottom: none;
+}
+
+.tabla__fila--activa {
+    background: #FBF1EA;
+    box-shadow: inset 4px 0 0 var(--color-acento);
+}
+
+.tabla__celda-principal {
+    font-weight: 400;
+}
+
+.tabla__principal {
+    display: block;
+    font-weight: 700;
+    color: var(--color-titulos);
+}
+
+.tabla__secundario {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+}
+
+.tabla__secundario a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.tabla__acciones {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.tabla__acciones .boton + .boton {
+    margin-left: 0.5rem;
+}
+
+.tabla__eliminar {
+    color: var(--color-error);
+}
+
+/* En pantallas chicas cada fila se apila como una ficha */
+@media (max-width: 640px) {
+    .tabla thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .tabla,
+    .tabla tbody,
+    .tabla tr,
+    .tabla th,
+    .tabla td {
+        display: block;
+    }
+
+    .tabla tr {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--color-linea);
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 0.3rem 1rem;
+        border: none;
+    }
+
+    .tabla td[data-etiqueta]::before {
+        content: attr(data-etiqueta) ": ";
+        font-weight: 700;
+        color: var(--color-titulos);
+    }
+
+    .tabla__acciones {
+        text-align: left;
+        white-space: normal;
+        padding-top: 0.6rem !important;
+    }
+}

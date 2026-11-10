@@ -1,0 +1,82 @@
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 46px;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid transparent;
+    border-radius: var(--radio-control);
+    font-family: var(--font-texto);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.boton:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.boton--primario {
+    background: var(--color-acento-fuerte);
+    color: #FFFFFF;
+}
+
+.boton--primario:hover:not(:disabled) {
+    background: var(--color-acento-hover);
+}
+
+.boton--secundario {
+    background: transparent;
+    border-color: var(--color-texto);
+    color: var(--color-texto);
+}
+
+.boton--secundario:hover:not(:disabled) {
+    background: var(--color-texto);
+    color: var(--color-fondo);
+}
+
+.boton--peligro {
+    background: var(--color-error);
+    color: #FFFFFF;
+}
+
+.boton--peligro:hover:not(:disabled) {
+    background: #862F21;
+}
+
+.boton--texto {
+    min-height: 40px;
+    padding: 0.4rem 0.35rem;
+    background: none;
+    color: var(--color-texto);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.boton--texto:hover:not(:disabled) {
+    color: var(--color-acento-fuerte);
+}
+
+.boton--chico {
+    min-height: 40px;
+    padding: 0.45rem 1rem;
+    font-size: 0.9375rem;
+}
+
+.boton--icono {
+    width: 44px;
+    min-height: 44px;
+    padding: 0;
+}
+
+.boton--bloque {
+    width: 100%;
+}

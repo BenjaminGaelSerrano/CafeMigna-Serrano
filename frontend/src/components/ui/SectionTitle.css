@@ -1,0 +1,14 @@
+.titulo-seccion {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin-bottom: 1.75rem;
+}
+
+.titulo-seccion span {
+    display: inline-block;
+    padding-bottom: 0.35rem;
+    border-bottom: 3px solid var(--color-acento);
+}
+
+.titulo-seccion--centrado {
+    text-align: center;
+}

@@ -1,0 +1,79 @@
+.plato-card {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radio-tarjeta);
+    overflow: hidden;
+}
+
+/* overflow: hidden hace que aspect-ratio no crezca con el alto natural de la foto */
+.plato-card__foto {
+    overflow: hidden;
+}
+
+.plato-card__nombre {
+    font-size: 1.2rem;
+}
+
+.plato-card__descripcion {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-texto-suave);
+}
+
+.plato-card__precio {
+    margin-top: 0.6rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-titulos);
+}
+
+/* Vertical: portada */
+.plato-card--vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.plato-card--vertical .plato-card__foto {
+    aspect-ratio: 4 / 3;
+}
+
+.plato-card--vertical .plato-card__cuerpo {
+    padding: 1.1rem 1.25rem 1.35rem;
+}
+
+/* Horizontal: lista de "Armá tu pedido" */
+.plato-card--horizontal {
+    display: grid;
+    grid-template-columns: 96px 1fr auto;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 0.9rem;
+}
+
+.plato-card--horizontal .plato-card__foto {
+    width: 96px;
+    height: 96px;
+    border-radius: var(--radio-control);
+    overflow: hidden;
+}
+
+.plato-card--horizontal .plato-card__nombre {
+    font-size: 1.15rem;
+}
+
+.plato-card--horizontal .plato-card__precio {
+    margin-top: 0.35rem;
+}
+
+@media (max-width: 480px) {
+    .plato-card--horizontal {
+        grid-template-columns: 72px 1fr auto;
+        gap: 0.8rem;
+    }
+
+    .plato-card--horizontal .plato-card__foto {
+        width: 72px;
+        height: 72px;
+    }
+}
